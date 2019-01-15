@@ -1,0 +1,140 @@
+
+/*more than 800 pixels width*/
+@media screen and (min-width: 800px){
+  .container{
+    display: grid;
+    width: 780px;
+    grid-template-columns: 120px auto 120px;
+    grid-template-rows: 80px auto 50px;
+  }
+  header{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: #68ff9c;
+  }
+
+  nav {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: #68a2ff;
+  }
+  aside{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: #ffca68;
+  }
+  article{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: #ffef68;
+  }
+  footer {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: #ff6868;
+  }
+
+
+}
+/*Between 800 and 480 pixels*/
+@media screen and (max-width: 800px){
+  .container{
+    display: grid;
+    width: auto;
+    grid-template-columns: 120px auto;
+    grid-template-rows: 80px auto auto 50px;
+  }
+  header{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: #68ff9c;
+  }
+
+  nav {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: #68a2ff;
+  }
+  aside{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: #ffca68;
+  }
+  article{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    background-color: #ffef68;
+  }
+  footer {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    background-color: #ff6868;
+  }
+
+
+}
+/*Less than 480 pixels*/
+@media screen and (max-width: 480px){
+  .container{
+    display: grid;
+    width: auto;
+    grid-template-columns: auto;
+    grid-template-rows: 80px auto auto auto 50px;
+  }
+  header{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: #68ff9c;
+  }
+
+  nav {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: #68a2ff;
+  }
+  aside{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: #ffca68;
+  }
+  article{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    background-color: #ffef68;
+  }
+  footer {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    background-color: #ff6868;
+  }
+}
