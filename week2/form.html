@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="utf-8">
+
+  </head>
+  <body>
+      <div class="outer-grid">
+        <header>
+          </header>
+            <h2>YOU'VE COME A LONG WAY-BABY!</h2>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-8">
+
+            <form id="personal_information">
+              <div class="d-flex flex-row">
+              <div class="circle text-light bg-dark">1</div>
+              <h3>Personal information</h3>
+              </div>
+              <div class="form-row">
+              <div class="form-group col-md-6">
+                <div>
+                  <label for="firstname">First name</label>
+                  <input id="firstname" type="text" class="form-control" placeholder="Elon" required>
+              </div>
+              </div>
+              <div class="form-group col-md-6">
+                <div>
+                  <label for="lastname">Last name</label>
+                  <input id="lastname" type="text" class="form-control" placeholder="Musk" required>
+                </div>
+              </div>
+          </div>
+          <div class="form-row">
+          <div class="form-group col-md-12">
+            <div>
+              <label for="email">Email</label>
+              <input id="email" class="form-control" placeholder="elon@spacex.com" required>
+          </div>
+          </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-5">
+                <label for="country">Country</label>
+                <select id="country" class="form-control" required>
+                  <option selected>Norway</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-5">
+                  <label for="postalcode">Postal Code</label>
+                  <input id="postalcode" pattern="[0-9]{4,4}" class="form-control" placeholder="10001" required>
+                  </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <div>
+                <label for="mob">Phone Number</label>
+                <input id="mob" type="phone" class="form-control" placeholder="(212)692-93-92" required>
+              </div>
+              </div>
+              </div>
+            </form>
+            </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6"
+                <form id="payment_details">
+                  <div class="d-flex flex-row">
+                  <div class="circle text-light bg-dark">2</div>
+                  <h3>Payment Details</h3>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+
+            <div class="col-sm-4">
+              <div class="form-group "
+                <form id="order_details">
+
+                </form>
+              </div>
+            </div>
+
+          </div>
+      </div>
+
+  </body>
+</html>
