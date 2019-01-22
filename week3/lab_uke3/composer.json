@@ -1,0 +1,6 @@
+{
+    "require": {
+        "seregazhuk/pinterest-bot": "^5.9",
+        "twig/twig": "^2.0"
+    }
+}

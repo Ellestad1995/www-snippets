@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SHow pinterest images</title>
+    <style>
+    body>div img {
+    width: 250px;
+  }
+  body>div {
+    width: 250px;
+    box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.75);
+    margin: 0 10px 10px 0;
+  }
+
+  body>div>div {
+    margin: 5px;
+  }
+
+
+  body {
+    column-count: 4;
+    width: 1024px;
+    margin: 0 auto;
+  }
+    @@media screen and (max-width: 1045px) {
+      body{
+        column-count: 3;
+        width: 770px;
+        margin: 0 auto;
+      }
+    }
+    @media screen and (max-width: 785px){
+      body{
+        column-count: 2;
+        width: 510px;
+        margin: 0 auto;
+      }
+    }
+    </style>
+</head>
+<body>
+{% for img in links %}
+<div>
+  <a href="{{img.url}}" target="_blank"><img src="{{img.img}}"></a>
+  <p>{{img.text}}</p>
+</div>
+{% endfor %}
+</body>
+</html>
