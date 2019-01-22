@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add contacts</title>
+</head>
+<body>
+<h1>{{title}}</h1>
+
+
+{% for contact in contacts%}
+<form action="editContacts.php" method="POST">
+<input type="hidden" name="id" value="{{contact.id}}">
+<input type="input" name="name" value="{{contact.navn}}">  | <input type="input" name="email" value="{{contact.email}}"> | <input type="input" name="mob" value="{{contact.mob}}">
+<input type="submit" name="edit">
+</form> <br><br>
+{%endfor%}
+
+</body>
+</html>

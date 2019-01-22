@@ -19,9 +19,11 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile.webapp
+    image: php:7.3-apache-stretch #Image that hass php and apachae capabilities
     volumes:
-      - ./kontakter/:/var/www/html/ #web files is at ./lab_uke3/index.php
-      - ./../twig/:/var/www/html/twig/ #Twig is installed at root level and mounted on each project. Use correct path in application!! "twig/"
+      - type: bind
+        - source: ./kontakter/
+        - target: /var/www/html/ #web files is at ./lab_uke3/index.php
     ports:
       - "80:80"
     networks:

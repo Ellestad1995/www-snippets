@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add contacts</title>
+</head>
+<body>
+<h1>{{title}}</h1>
+<form action="/searchContact.php" method="GET">
+    <input name="search" placeholder="search for name">
+    <input type="submit" name="searchcontact">
+</form>
+
+
+<ul>
+{% for contact in contacts%}
+<li> {{contact.navn}} | {{contact.email}} | {{contact.mob}}</li>
+{%endfor%}
+<ul>
+</body>
+</html>

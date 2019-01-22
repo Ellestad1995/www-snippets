@@ -1,6 +1,6 @@
 <?php
 require_once "Pinterest.php";
-require_once '../../twig/vendor/autoload.php';
+require_once './twig/vendor/autoload.php';
 
 $res = Pinterest::getPins("mathematical riddles fun");
 
