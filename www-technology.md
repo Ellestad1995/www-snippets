@@ -64,3 +64,60 @@ Reference: [mozilla css reference](https://developer.mozilla.org/en-US/docs/Web/
 
 
 
+## Cookies
+
+* Små mengder informasjon som sendes fra server->klient og klient->server
+
+```PHP
+$_COOKIE['name'] //Access to cookies
+isset($COOKIE['name']) //If server received named cookie
+setcookie('name',1, time()+60*60*24) 
+```
+
+
+
+* name - 
+
+* value
+
+* expires - unix timestamp
+
+  ----
+
+* path - If set to *'/'*, the cookie will be available within the entire `domain`. If set to *'/foo/'*, the cookie will only be available within the */foo/* directory and all sub-directories such as */foo/bar/* of `domain`. The default value is the current directory that the cookie is being set in.
+
+* domain - 
+
+* secure - true/false - true= only when https is possible on client side. On server programmer must fin d out if https ([$_SERVER["HTTPS"\]](http://php.net/manual/en/reserved.variables.server.php)))
+
+* httponly
+
+* options
+
+Slett en cookie ved å `setcookie` til tom verdi og gyldig i bakover tid. Da vil nettleser slette cookie.
+
+`setcookie` må kjøres før noe html returners. Server kan buffre før scriptet kjøres ferdig.
+
+## Session
+
+
+
+`session_start()`
+
+ PHPSESSID
+
+Samme session id er samme bruker. 
+
+`$_SESSION`
+
+* Lagre kun brukerdata og enkle datastrukturer
+
+**Fjerne**
+
+* session_destroy
+* session_unset
+
+
+
+## Testing
+
