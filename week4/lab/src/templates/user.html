@@ -1,0 +1,15 @@
+{% if loggedin == 'yes'  %}
+<h1> {{userdata['name']}}}</h1>
+
+<form id="logout" method="POST" action="index.php">
+    <input type="hidden" name="logout" value="1">
+    <input type="submit" value="Logg ut">
+</form>
+{% else %}
+<h1>Logg inn</h1>
+
+<form id="login" method="POST" action="index.php">
+    <input type="text" name="email" id="loginemail" placeholder="email address">
+    <input type="password" name="pass" id="loginpass" placeholder="Password">
+</form>
+{% endif %}

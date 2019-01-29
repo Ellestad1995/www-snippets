@@ -1,0 +1,40 @@
+version: '3'
+services:
+  db: # Database
+    image: mariadb
+    ports:
+      - "3306:3306"
+    hostname: database
+    environment:
+      - MYSQL_ROOT_PASSWORD=Password99 #This variable is mandatory and specifies the password that will be set for the MariaDB root superuser account.
+      - MYSQL_DATABASE=storage
+      - MYSQL_USER=starlord
+      - MYSQL_PASSWORD=Password99
+    volumes:
+      - ./sql/:/docker-entrypoint-initdb.d/ #Mount sql files. Runs in alpabetical order
+    #  - persistent:/var/lib/mysql
+    networks:
+        - default
+
+  web: # Webapplication
+    build:
+      context: .
+      dockerfile: ./Dockerfile.webapp
+    volumes:
+      - ./src/:/var/www/html/ #copy web files to webserver
+      - ./../../twig/:/var/www/html/twig/ #Twig is installed at root level and mounted on each project. Use correct path in application!! "twig/"
+    ports:
+      - "80:80"
+    networks:
+        - default
+
+  phpmyadmin: # phpmyadmin
+      image: phpmyadmin/phpmyadmin
+      ports:
+          - 8000:80
+      environment:
+          - MYSQL_USER=starlord
+          - MYSQL_PASSWORD=Password99
+          - MYSQL_ROOT_PASSWORD=Password99
+      networks:
+          - default

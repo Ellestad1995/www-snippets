@@ -1,0 +1,6 @@
+FROM php:7.3-apache-stretch
+RUN docker-php-ext-install pdo_mysql \
+ && docker-php-ext-enable pdo_mysql
+COPY ./../twig:/var/www/html/
+COPY /Users/joakimellestad/Documents/Skole/IMT2291-www-teknologi/composer/composer.phar /usr/bin/composer
+RUN composer install
